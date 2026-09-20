@@ -79,4 +79,8 @@ vibe/
 vote-result/
 workgroups/
 vendor/
-local/storage/
+local/storage/*
+!local/storage/.gitkeep
+!local/storage/logs/
+local/storage/logs/*
+!local/storage/logs/.gitkeep

@@ -1,0 +1,10 @@
+OTUS | 2026-09-20 10:30:18 - Host: 192.168.0.118:80 - UNCAUGHT_EXCEPTION - [DivisionByZeroError] 
+Division by zero (0)
+/home/bitrix/www/homeworks/homework2/writeexception.php:11
+----------
+
+OTUS | 2026-09-20 10:30:21 - Host: 192.168.0.118:80 - UNCAUGHT_EXCEPTION - [DivisionByZeroError] 
+Division by zero (0)
+/home/bitrix/www/homeworks/homework2/writeexception.php:11
+----------
+

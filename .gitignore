@@ -84,3 +84,4 @@ local/storage/*
 !local/storage/logs/
 local/storage/logs/*
 !local/storage/logs/.gitkeep
+!local/storage/logs/.htaccess

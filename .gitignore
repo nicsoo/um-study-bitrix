@@ -42,8 +42,8 @@ gotobot/
 hr/
 images/
 include/
-index.php
-index_old.php
+/index.php
+/index_old.php
 kb/
 knowledge/
 license_restriction.php

@@ -57,7 +57,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Врачи и процедуры
@@ -68,7 +68,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/doctors/index.php"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылки на просмотр кода основных файлов ДЗ (связь таблиц и ORM)

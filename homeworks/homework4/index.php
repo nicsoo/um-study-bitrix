@@ -12,20 +12,19 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
     <h1 class="mb-3"><? $APPLICATION->ShowTitle() ?></h1>
 
     <h4 class="mb-3">Пояснительная записка</h4>
-    <div>
-        Тут добавить описание того что и как было реализовано.
-    </div>
-    <br>
-    <br>
-    <hr>
-
-
     <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
+        • Реализован класс "HospitalsTable" - описывающий БД "hospitals_table";<br>
+        • Созданы поля: <br>
+        • ID(INT|PRIMARY|AUTOINCREMENT); NAME(STRING); DATE_OF_FOUNDATION(DATE);<br>
+        • TYPE_ID (INT) + создано отношение через Reference к ИБ "Типы больниц';<br>
+        • CITY_ID (INT) + создано отношение через Reference к ИБ "Города';<br>
+        • AGE_DAYS (ExpressionField) - вычисляемое поле "сколько дней прошло с момента основания";<br>
+        <br>
+        • В list.php через getList(...)->fetchCollection() получаю коллекцию, далее через цикл вывожу все данные<br>
+        • Еще созданы вспомогательные кнопки "Создать записи", "Создать БД" для удобства проверки.
     </div>
 
-
-
+    <hr>
 
     <div class="card shadow-sm mt-4">
         <div class="card-header bg-success text-white">
@@ -33,7 +32,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/bitrix/admin/perfmon_table.php?lang=ru&table_name=hospitals_table"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на таблицу
@@ -44,10 +43,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/bitrix/admin/iblock_list_admin.php?IBLOCK_ID=19&type=lists&lang=ru&find_section_section=0&SECTION_ID=0&apply_filter=Y"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Список на ИБ 1
+                    Список на ИБ "Типы больниц"
                 </span>
                     <span class="badge bg-primary">
                    Ссылка на просмотр в админке
@@ -55,10 +54,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/bitrix/admin/iblock_list_admin.php?IBLOCK_ID=18&type=lists&lang=ru&find_section_section=0&SECTION_ID=0&apply_filter=Y"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Список на ИБ 2
+                    Список на ИБ "Города"
                 </span>
                     <span class="badge bg-primary">
                    Ссылка на просмотр в админке
@@ -66,7 +65,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/homeworks/homework4/list.php"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на тестовую страницу
@@ -78,7 +77,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/homeworks/homework4/list.php"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на тестовую страницу
@@ -90,13 +89,51 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Models/HospitalsTable.php"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Ссылки на просмотр кода основных файлов ДЗ (связь таблиц, ORM, классы  и т.д.)
+                    Ссылки на просмотр кода HospitalsTable.php
                 </span>
                     <span class="badge bg-warning">
                     файл в админке
+                </span>
+                </a>
+            </li>
+            <li class="list-group-item list-group-item-action">
+                <a href="/bitrix/admin/fileman_file_view.php?path=/homeworks/homework4/list.php"
+                   class="d-flex justify-content-between align-items-center">
+                <span>
+                    Ссылки на просмотр кода list.php
+                </span>
+                    <span class="badge bg-warning">
+                    файл в админке
+                </span>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <div style="color: red;font-style: italic; margin:15px 0px;">Вспомогательные кнопки</div>
+        <br>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">
+                <a href="/homeworks/homework4/createRow.php"
+                   class="d-flex justify-content-between align-items-center">
+                <span>
+                    Создать записи в БД
+                </span>
+                    <span class="badge bg-secondary">
+                   Ссылка на файл
+                </span>
+                </a>
+            </li>
+            <li class="list-group-item list-group-item-action">
+                <a href="/homeworks/homework4/createTable.php"
+                   class="d-flex justify-content-between align-items-center">
+                <span>
+                    Создать БД
+                </span>
+                    <span class="badge bg-secondary">
+                   Ссылка на файл
                 </span>
                 </a>
             </li>

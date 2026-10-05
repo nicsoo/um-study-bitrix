@@ -41,7 +41,7 @@ if ($method === "GET") {
                                 <?php } ?>
                             </ul>
                         <?php } else { ?>
-                            <p class="text-muted mb-0">Не доступных процедур</p>
+                            <p class="text-muted mb-0">Нет доступных процедур</p>
                         <?php } ?>
                     </div>
                 </div>

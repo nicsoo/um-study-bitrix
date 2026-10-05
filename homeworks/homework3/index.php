@@ -24,10 +24,6 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
     <br>
     <hr>
 
-    <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
-    </div>
-
 
     <div class="card shadow-sm mt-4">
         <div class="card-header bg-success text-white">
@@ -35,7 +31,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/17/view/0/?list_section_id="
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Список врачей
@@ -46,7 +42,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/16/view/0/?list_section_id="
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Список процедур
@@ -57,7 +53,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="/"
+                <a href="/doctors/"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Врачи и процедуры

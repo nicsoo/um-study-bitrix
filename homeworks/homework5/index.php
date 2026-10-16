@@ -19,8 +19,8 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
     <br>
     <hr>
 
-    <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
+     <div style="color: red;font-style: italic;">
+        • Создал кастомный компонент на основе существующего компонента bitrix:currency.rates";<br>
     </div>
 
 

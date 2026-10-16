@@ -31,7 +31,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         <ul class="list-group list-group-flush">
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/otus/currencies"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на тестовую страницу с компонентом
@@ -43,7 +43,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/otus/currencies/index.php"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылки на просмотр кода основных файлов ДЗ (связь таблиц, ORM, классы  и т.д.)
@@ -55,6 +55,5 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
         </ul>
     </div>
-
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

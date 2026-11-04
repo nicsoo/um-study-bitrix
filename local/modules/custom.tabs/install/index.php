@@ -5,12 +5,13 @@ use Bitrix\Main\IO\Directory;
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\ModuleManager;
 use Bitrix\Main\Application;
+use Bitrix\Main\EventManager;
 
 Loc::loadMessages(__FILE__);
 
 class custom_tabs extends CModule {
 
-    public $MODULE_ID = "custom_tabs";
+    public $MODULE_ID = "custom.tabs";
     public $MODULE_VERSION;
     public $MODULE_VERSION_DATE;
     public $MODULE_NAME;
@@ -38,9 +39,12 @@ class custom_tabs extends CModule {
             return;
         };
 
-        ModuleManager::registerModule('custom_tabs');
+        if (!ModuleManager::isModuleInstalled($this->MODULE_ID)) {
+            ModuleManager::registerModule($this->MODULE_ID);
+        }
 
         $this->InstallFiles();
+        $this->InstallEvents();
 
 
         $APPLICATION->IncludeAdminFile(
@@ -56,6 +60,25 @@ class custom_tabs extends CModule {
             $_SERVER['DOCUMENT_ROOT'] . '/local/components/custom/',
             true,
             true
+        );
+    }
+
+    public function InstallEvents() {
+        EventManager::getInstance()->registerEventHandler(
+            'crm',                              
+            'onEntityDetailsTabsInitialized',   
+            'custom.tabs',                     
+            'Custom\\Tabs\\EntityDetailsTabs', 
+            'onEntityDetailsTabsInitialized',
+        );
+    }
+    public function UnInstallEvents() {
+        EventManager::getInstance()->unRegisterEventHandler(
+            'crm',                              
+            'onEntityDetailsTabsInitialized',   
+            'custom.tabs',                     
+            'Custom\\Tabs\\EntityDetailsTabs', 
+            'onEntityDetailsTabsInitialized',
         );
     }
 
@@ -80,9 +103,10 @@ class custom_tabs extends CModule {
             return;
         };
 
-        ModuleManager::unregisterModule('custom_tabs');
+        ModuleManager::unregisterModule($this->MODULE_ID);
 
         $this->UnInstallFiles();
+        $this->UnInstallEvents();
 
 
         $APPLICATION->IncludeAdminFile(
@@ -90,7 +114,11 @@ class custom_tabs extends CModule {
             __DIR__ . '/unstep.php'
         );
     }
-
+    /**
+     * Функция получения путей компонентов модуля custom.tabs для удаления
+     *
+     * @return array массив, в котором хранятся готовые пути для удаления
+     */
     private function getAllComponentsDirsForDelete(): array {
         $root = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
         $source = $root . '/local/modules/custom.tabs/install/components/custom';

@@ -85,3 +85,6 @@ local/storage/*
 local/storage/logs/*
 !local/storage/logs/.gitkeep
 !local/storage/logs/.htaccess
+
+!local/modules/custom.booking/install/js/custom/booking/
+!local/modules/custom.booking/lib/booking/

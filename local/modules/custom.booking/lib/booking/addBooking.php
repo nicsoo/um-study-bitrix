@@ -33,9 +33,9 @@ if ($result->isSuccess()) {
     ])->fetchObject();
     $bookingObj->setProcedures($procedureId);
     $bookingObj->save();
-    return "Запись успешно оформлена!";
+    echo "Запись успешно оформлена!";
 } else {
-    return $result->getErrorMessages();
+    echo implode("\n", $result->getErrorMessages());
 }
 
 

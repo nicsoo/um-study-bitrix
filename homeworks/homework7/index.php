@@ -36,7 +36,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         <ul class="list-group list-group-flush">
 
             <li class="list-group-item list-group-item-action">
-                <a href="/services/lists/18/view/0/?list_section_id="
+                <a href="/services/lists/20/view/0/?list_section_id="
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на список бронирование
@@ -48,7 +48,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/services/lists/16/view/0/?list_section_id="
+                <a href="/services/lists/17/view/0/?list_section_id="
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на список врачей

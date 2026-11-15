@@ -20,15 +20,15 @@ if ($patientName === '' || $date === '' || $procedureId === 0) {
 
 $result = \Bitrix\Iblock\Elements\ElementBookingTable::add([
     'NAME'   => $patientName,
-    'DATEOFPROCEDURE' => $date,
     'ACTIVE' => 'Y',
 ]);
 
 if ($result->isSuccess()) {
     $bookingID = $result->getID();
     $bookingObj = \Bitrix\Iblock\Elements\ElementBookingTable::getByPrimary($bookingID,[
-        'select' => ['ID', 'NAME', 'PROCEDURES'],
+        'select' => ['ID', 'DATEOFPROCEDURE', 'PROCEDURES'],
     ])->fetchObject();
+    $bookingObj->set('DATEOFPROCEDURE', $date);
     $bookingObj->setProcedures($procedureId);
     $bookingObj->save();
     echo "Запись успешно оформлена!";

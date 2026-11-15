@@ -46,6 +46,6 @@ function bookingPopupOpen(procedureId, procedureName) {
         myPopup.show();
         var dateInput = myPopup.popupContainer.querySelector('#booking-date');
         BX.bind(dateInput, 'click', function () {
-            BX.calendar({node: dateInput, field: dateInput, bTime: true});
+            BX.calendar({node: dateInput, field: dateInput, bTime: true, bHideTime: false});
         });
 }

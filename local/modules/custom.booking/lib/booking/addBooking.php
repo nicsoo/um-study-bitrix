@@ -18,8 +18,6 @@ if ($patientName === '' || $date === '' || $procedureId === 0) {
     ShowError('Invalid data');
 }
 
-$date = new DateTime($date);
-
 $result = \Bitrix\Iblock\Elements\ElementBookingTable::add([
     'NAME'   => $patientName,
     'DATEOFPROCEDURE' => $date,

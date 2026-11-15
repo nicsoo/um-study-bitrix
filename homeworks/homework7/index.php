@@ -93,10 +93,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/modules/custom.booking/js/custom/booking/config.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/local/modules/custom.booking/install/js/custom/booking/config.php"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    local/js/custom/booking/config.php
+                    /local/modules/custom.booking/install/js/custom/booking/config.php
                 </span>
                     <span class="badge bg-warning">
                     файл в админке
@@ -104,10 +104,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/modules/custom.booking/js/custom/booking/script.js"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/local/modules/custom.booking/install/js/custom/booking/script.js"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    local/js/custom/booking/script.js
+                    /local/modules/custom.booking/install/js/custom/booking/script.js
                 </span>
                     <span class="badge bg-warning">
                     файл в админке

@@ -85,7 +85,7 @@ note/
 stafftrack/
 sync/
 welcome/
-local/modules/custom.priority/
+# local/modules/custom.priority/
 local/storage/*
 !local/storage/.gitkeep
 !local/storage/logs/

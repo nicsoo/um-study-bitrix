@@ -13,18 +13,16 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
 <h1 class="mb-3"><? $APPLICATION->ShowTitle() ?></h1>
 
 <h4 class="mb-3">Пояснительная записка</h4>
-<div>
-    Тут добавить описание того что и как было реализовано.
-</div>
+    <div style="color: red;font-style: italic;">
+        • Создал js скрипт, в котором привязываюсь к событию onTimemanInit<br>
+        • При событии я переопределяю JS функцию BXTIMEMAN.WND.ACTIONS.OPEN. В переменную завожу старую функцию и вызываю ее уже при клике на кнопку "ПОДТВЕРДИТЬ"<br>
+
+
+
+    </div>
 <br>
 <br>
 <hr>
-
-
-
-    <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
-    </div>
 
     <div class="card shadow-sm mt-4">
         <div class="card-header bg-success text-white">
@@ -34,10 +32,21 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
 
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=/local/js/custom/time/script.js"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Ссылки на просмотр кода основных файлов ДЗ (связь таблиц, ORM, классы  и т.д.)
+                    script.js
+                </span>
+                    <span class="badge bg-warning">
+                    файл в админке
+                </span>
+                </a>
+            </li>
+            <li class="list-group-item list-group-item-action">
+                <a href="/bitrix/admin/fileman_file_view.php?path=/local/js/custom/time/config.php"
+                   class="d-flex justify-content-between align-items-center">
+                <span>
+                    config.php
                 </span>
                     <span class="badge bg-warning">
                     файл в админке

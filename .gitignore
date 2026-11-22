@@ -79,6 +79,13 @@ vibe/
 vote-result/
 workgroups/
 vendor/
+guest/
+mcp/
+note/
+stafftrack/
+sync/
+welcome/
+local/modules/custom.priority/
 local/storage/*
 !local/storage/.gitkeep
 !local/storage/logs/
